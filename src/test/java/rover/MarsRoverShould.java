@@ -18,6 +18,14 @@ public class MarsRoverShould {
 	 *
 	 */
 
+	@Test
+	public void stay_at_starting_location_and_direction_when_it_doesnt_move(){
+		Location start = new Location(0,0);
+		MarsRover rover = new MarsRover(start, Direction.NORTH);
+		Assert.assertThat(rover.getLocation(), Matchers.is(new Location(0, 0)));
+		Assert.assertThat(rover.getDirection(),Matchers.is(Direction.NORTH));
+	}
+
 
 
 }
