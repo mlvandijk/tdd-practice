@@ -23,4 +23,32 @@ public class PasswordCheckerShould {
 	 * abAB12!@
 	 */
 
+	private PasswordChecker passwordChecker;
+
+	@Before
+	public void given_a_passwordchecker() {
+		passwordChecker = new PasswordChecker();
+	}
+
+	@Test
+	public void return_true_for_valid_example_password(){ // abAB12!@
+		Assert.assertEquals(passwordChecker.isValid("abAB12!@"), true);
+	}
+
+	@Test
+	public void return_false_for_password_less_than_8_chars(){
+		Assert.assertEquals(passwordChecker.isValid("abAB12!"), false);
+	}
+
+	@Test
+	public void return_false_for_password_without_numbers(){
+		Assert.assertEquals(passwordChecker.isValid("abABvX!@"), false);
+
+	}
+
+	@Test
+	public void return_false_for_password_without_capital() {
+		Assert.assertEquals(passwordChecker.isValid("abab12!@"), false);
+	}
+
 }
