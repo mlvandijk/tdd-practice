@@ -13,11 +13,12 @@ public class FizzBuzzShould {
 	 * Implement the perfect player that, given a number, correctly returns the number, "Fizz", "Buzz" or "FizzBuzz" respectively
 	 *
 	 * Examples
-	 * 13 -> "Fizz"
-	 * 14 -> "Buzz"
-	 * 15 -> "Fuzzy"
-	 * 16 -> 16
+	 * 1 -> "1"
+	 * 3 -> "Fizz"
+	 * 5 -> "Buzz"
+	 * 15 -> "FizzBuzz"
 	 *
-	 * 27 -> "FizzBuzz"
+	 * Optional:
+	 * Do the same for number ending in 3 or 5
 	 */
 }
