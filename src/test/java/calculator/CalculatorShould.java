@@ -1,3 +1,5 @@
+package calculator;
+
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;
