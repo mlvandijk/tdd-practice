@@ -1,4 +1,4 @@
-package rover;
+package marsrover;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
