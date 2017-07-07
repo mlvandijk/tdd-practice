@@ -1,3 +1,4 @@
+package calculator;
 
 public class Calculator {
     private final Validator validator;
