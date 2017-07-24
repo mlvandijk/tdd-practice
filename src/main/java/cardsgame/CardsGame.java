@@ -1,4 +1,8 @@
+package cardsgame;
+
 import java.util.List;
+
+import cardsgame.*;
 
 public class CardsGame {
     private Player player1;
