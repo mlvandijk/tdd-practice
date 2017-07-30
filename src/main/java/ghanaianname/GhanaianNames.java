@@ -5,17 +5,8 @@ import java.time.LocalDate;
 public class GhanaianNames {
 
 
-    public static WeekDays getDayOfWeek(LocalDate of) {
-        return WeekDays.FRIDAY;
+    public static String getDayOfWeek(LocalDate date) {
+        return date.getDayOfWeek().name();
     }
 
-    public enum WeekDays{
-        SUNDAY,
-        MONDAY,
-        TUESDAY,
-        WEDNESDAY,
-        THURSDAY,
-        FRIDAY,
-        SATURDAY
-    }
 }

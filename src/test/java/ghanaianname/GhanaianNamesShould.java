@@ -25,12 +25,12 @@ public class GhanaianNamesShould {
 
     @Test
     public void feb_25th_1977_is_a_friday(){
-        Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(1977, 2, 25)), GhanaianNames.WeekDays.FRIDAY);
+        Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(1977, 2, 25)), "FRIDAY");
     }
 
     @Test
     public void jan_4th_2012_is_a_wednesday(){
-        Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(2012, 1, 4)), GhanaianNames.WeekDays.WEDNESDAY);
+        Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(2012, 1, 4)), "WEDNESDAY");
     }
 
 
