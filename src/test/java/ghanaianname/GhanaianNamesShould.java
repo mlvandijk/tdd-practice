@@ -16,20 +16,18 @@ package ghanaianname;
 * Source (includes pronunciation): https://thisworldmusic.com/african-day-name-generator/
 */
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
 
 public class GhanaianNamesShould {
 
-
     @Test
     public void feb_25th_1977_is_a_friday(){
-        GhanaianNames.getDayOfWeek(LocalDate.of(1977, 2, 25));
-
-        }
-
+        Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(1977, 2, 25)), "FRIDAY");
     }
+
 
 
 }
