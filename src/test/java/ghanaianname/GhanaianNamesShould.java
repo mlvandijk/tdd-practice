@@ -28,6 +28,10 @@ public class GhanaianNamesShould {
         Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(1977, 2, 25)), GhanaianNames.WeekDays.FRIDAY);
     }
 
+    @Test
+    public void jan_4th_2012_is_a_wednesday(){
+        Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(2012, 1, 4)), GhanaianNames.WeekDays.WEDNESDAY);
+    }
 
 
 }
