@@ -36,6 +36,10 @@ public class GhanaianNamesShould {
     // TO DO list:
 
     // Convert date input to localdate
+    @Test
+    public void input_20170731_is_mon_31st_juli_2017(){
+        Assert.assertEquals(GhanaianNames.getLocalDate("2017-07-31"), LocalDate.of(2017, 07, 31) );
+    }
     // (Give error message if date input is incorrect)
 
     // Provide correct name/names for day of the week
