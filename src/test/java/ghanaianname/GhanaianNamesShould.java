@@ -33,5 +33,17 @@ public class GhanaianNamesShould {
         Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(2012, 1, 4)), "WEDNESDAY");
     }
 
+    // TO DO list:
+
+    // Convert date input to localdate
+    // (Give error message if date input is incorrect)
+
+    // Provide correct name/names for day of the week
+
+    // Prompt for gender
+    // (Give error message if gender input is incorrect)
+
+    // Provide correct name for gender & day of the week
+
 
 }
