@@ -40,14 +40,22 @@ public class GhanaianNamesShould {
     public void input_20170731_is_mon_31st_juli_2017(){
         Assert.assertEquals(GhanaianNames.getLocalDate("2017-07-31"), LocalDate.of(2017, 07, 31) );
     }
+    // Validate date input is correct
+    // eg contains non-digits, wrong length, no -, etc.
     // (Give error message if date input is incorrect)
 
-    // Provide correct name/names for day of the week
+    // Provide correct Ghanaian name/names for day of the week
 
-    // Prompt for gender
+    // Select name based on gender
+
+    // Validate gender input
+    // Should be 'male' or female'
     // (Give error message if gender input is incorrect)
+    // Note: Make it case insensitive? Accept M/F and Male/Female?
 
     // Provide correct name for gender & day of the week
+    // Test cases: Afia (F/Friday), Kwaku(M/Wednesday), Kodjo(M/Monday)
+    // Test all options, keep some
 
 
 }
