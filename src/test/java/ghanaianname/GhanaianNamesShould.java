@@ -40,9 +40,17 @@ public class GhanaianNamesShould {
     public void input_20170731_is_mon_31st_juli_2017(){
         Assert.assertEquals(GhanaianNames.getLocalDate("2017-07-31"), LocalDate.of(2017, 07, 31) );
     }
+
+
     // Validate date input is correct
     // eg contains non-digits, wrong length, no -, etc.
     // (Give error message if date input is incorrect)
+    @Test(expected = NumberFormatException.class)
+    public void input_containing_non_digits_gives_error_message(){
+        Assert.assertEquals(GhanaianNames.getLocalDate("a"), LocalDate.of(2017, 07, 31) );
+    }
+
+    // Get day of week from correct date input
 
     // Provide correct Ghanaian name/names for day of the week
 
