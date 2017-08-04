@@ -33,9 +33,8 @@ public class GhanaianNamesShould {
         Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(2012, 1, 4)), "WEDNESDAY");
     }
 
-    // TO DO list:
 
-    // Convert date input to localdate
+
     @Test
     public void input_20170731_is_mon_31st_juli_2017(){
         Assert.assertEquals(GhanaianNames.getLocalDate("2017-07-31"), LocalDate.of(2017, 07, 31) );
@@ -43,12 +42,19 @@ public class GhanaianNamesShould {
 
 
     // Validate date input is correct
-    // eg contains non-digits, wrong length, no -, etc.
-    // (Give error message if date input is incorrect)
+    // non-digits
     @Test(expected = NumberFormatException.class)
     public void input_containing_non_digits_gives_error_message(){
         Assert.assertEquals(GhanaianNames.getLocalDate("a"), LocalDate.of(2017, 07, 31) );
     }
+
+
+
+
+    // TO DO list:
+
+    // eg contains non-digits, wrong length, no -, etc.
+    // (Give error message if date input is incorrect)
 
     // Get day of week from correct date input
 
