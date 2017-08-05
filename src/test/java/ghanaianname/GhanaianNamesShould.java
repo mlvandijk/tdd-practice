@@ -34,31 +34,25 @@ public class GhanaianNamesShould {
         Assert.assertEquals(GhanaianNames.getDayOfWeek(LocalDate.of(2012, 1, 4)), "WEDNESDAY");
     }
 
-
-
     @Test
     public void input_20170731_is_mon_31st_juli_2017(){
         Assert.assertEquals(GhanaianNames.getLocalDate("2017-07-31"), LocalDate.of(2017, 07, 31) );
     }
 
-
-    // Validate date input is correct
-    // non-digits
     @Test (expected = DateTimeException.class)
     public void input_containing_non_digits_gives_exception(){
         Assert.assertEquals(GhanaianNames.getLocalDate("a"), "Date of Birth should have the format yyyy-mm-dd");
     }
 
-    // too many digits
     @Test(expected = DateTimeException.class)
     public void input_too_long_gives_error_message(){
         Assert.assertEquals(GhanaianNames.getLocalDate("012345678910"), "Date of Birth should have the format yyyy-mm-dd");
     }
 
     // TO DO list:
-    // (Give error message if date input is incorrect); how to check for actual message?
+    // How to check for actual message?
 
-    // Get day of week from correct date input
+    // Get day of week from actual correct date input
 
     // Provide correct Ghanaian name/names for day of the week
 
