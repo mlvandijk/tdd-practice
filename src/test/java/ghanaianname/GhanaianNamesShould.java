@@ -45,14 +45,18 @@ public class GhanaianNamesShould {
     // Validate date input is correct
     // non-digits
     @Test (expected = DateTimeException.class)
-    public void input_containing_non_digits_gives_error_message(){
-        Assert.assertEquals(GhanaianNames.getLocalDate("a"), "Date of Birth should have the format yyyy-mm-dd" );
+    public void input_containing_non_digits_gives_exception(){
+        Assert.assertEquals(GhanaianNames.getLocalDate("a"), "Date of Birth should have the format yyyy-mm-dd");
     }
-    
-    // TO DO list:
 
-    // eg contains non-digits, wrong length, no -, etc.
-    // (Give error message if date input is incorrect)
+    // too many digits
+    @Test(expected = DateTimeException.class)
+    public void input_too_long_gives_error_message(){
+        Assert.assertEquals(GhanaianNames.getLocalDate("012345678910"), "Date of Birth should have the format yyyy-mm-dd");
+    }
+
+    // TO DO list:
+    // (Give error message if date input is incorrect); how to check for actual message?
 
     // Get day of week from correct date input
 
