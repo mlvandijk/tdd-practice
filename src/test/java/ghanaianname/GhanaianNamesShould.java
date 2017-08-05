@@ -19,6 +19,7 @@ package ghanaianname;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.DateTimeException;
 import java.time.LocalDate;
 
 public class GhanaianNamesShould {
@@ -43,14 +44,11 @@ public class GhanaianNamesShould {
 
     // Validate date input is correct
     // non-digits
-    @Test(expected = NumberFormatException.class)
+    @Test (expected = DateTimeException.class)
     public void input_containing_non_digits_gives_error_message(){
-        Assert.assertEquals(GhanaianNames.getLocalDate("a"), LocalDate.of(2017, 07, 31) );
+        Assert.assertEquals(GhanaianNames.getLocalDate("a"), "Date of Birth should have the format yyyy-mm-dd" );
     }
-
-
-
-
+    
     // TO DO list:
 
     // eg contains non-digits, wrong length, no -, etc.
