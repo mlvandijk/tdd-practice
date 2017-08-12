@@ -41,7 +41,12 @@ public class GhanaianNamesShould {
 
     @Test (expected = DateTimeException.class)
     public void input_containing_non_digits_gives_exception(){
-        Assert.assertEquals(GhanaianNames.getLocalDate("a"), "Date of Birth should have the format yyyy-mm-dd");
+        try {
+            GhanaianNames.getLocalDate("a");
+        } catch (DateTimeException e) {
+            Assert.assertEquals(e.getMessage(), "Date of Birth should have the format yyyy-mm-dd");
+            throw e;
+        }
     }
 
     @Test(expected = DateTimeException.class)
@@ -64,7 +69,7 @@ public class GhanaianNamesShould {
     // Note: Make it case insensitive? Accept M/F and Male/Female?
 
     // Provide correct name for gender & day of the week
-    // Test cases: Afia (F/Friday), Kwaku(M/Wednesday), Kodjo(M/Monday)
+    // Test cases: Afia (F/Friday), Kwaku(M/Wednesday), Kodjo(M/Monday), Akua(F/Wed)
     // Test all options, keep some
 
 
