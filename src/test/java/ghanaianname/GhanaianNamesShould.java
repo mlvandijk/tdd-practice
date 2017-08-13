@@ -74,10 +74,15 @@ public class GhanaianNamesShould {
     public void male_returns_male(){
         Assert.assertEquals("male", GhanaianNames.getGender("male"));
     }
-    
+
     @Test
     public void Female_returns_female(){
         Assert.assertEquals("female", GhanaianNames.getGender("Female"));
+    }
+
+    @Test
+    public void f_returns_female(){
+        Assert.assertEquals("female", GhanaianNames.getGender("f"));
     }
 
     // (Give error message if gender input is incorrect)
