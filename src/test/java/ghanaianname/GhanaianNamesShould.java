@@ -70,6 +70,11 @@ public class GhanaianNamesShould {
 
     // Validate gender input
     // Should be 'male' or female'
+    @Test
+    public void male_returns_male(){
+        Assert.assertEquals("male", GhanaianNames.getGender("male"));
+    }
+
     // (Give error message if gender input is incorrect)
     // Note: Make it case insensitive? Accept M/F and Male/Female?
 

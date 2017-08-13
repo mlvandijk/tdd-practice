@@ -45,4 +45,18 @@ public class GhanaianNames {
         }
         return dateAsInts;
     }
+
+    public static String getGender(String genderInput) {
+        String gender = "";
+
+        if (genderInput.toLowerCase().equals("male") || genderInput.toLowerCase().equals("m")){
+            gender = "male";
+        }
+        if (genderInput.toLowerCase().equals("female") || genderInput.toLowerCase().equals("f")){
+            gender = "female";
+        }
+        return gender;
+    }
+
+
 }
