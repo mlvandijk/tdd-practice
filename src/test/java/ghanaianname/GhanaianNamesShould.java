@@ -60,27 +60,42 @@ public class GhanaianNamesShould {
         }
     }
 
-    // TO DO list:
-
-    // Get day of week from actual correct date input
     @Test
     public void date19770225_returns_Friday(){
         Assert.assertEquals(DayOfWeek.FRIDAY, GhanaianNames.getLocalDate("1977-02-25").getDayOfWeek());
     }
 
+    // TO DO list:
 
-    // Provide correct Ghanaian name/names for day of the week
-
-    // Select name based on gender
 
     // Validate gender input
     // Should be 'male' or female'
     // (Give error message if gender input is incorrect)
     // Note: Make it case insensitive? Accept M/F and Male/Female?
 
+    // Select name based on gender
+
     // Provide correct name for gender & day of the week
-    // Test cases: Afia (F/Friday), Kwaku(M/Wednesday), Kodjo(M/Monday), Akua(F/Wed)
-    // Test all options, keep some
+    @Test
+    public void date19770225_Female_returns_Afia(){
+
+    }
+
+    @Test
+    public void date20120104_Male_returns_Kwaku(){
+
+    }
+
+    @Test
+    public void date20140224_Male_returns_Kodjo(){
+
+    }
+
+    @Test
+    public void date20120118_Male_returns_Akua(){
+
+    }
+    // Note: Test all options, keep some?
 
 
 }
