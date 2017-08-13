@@ -20,6 +20,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.DateTimeException;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 
 public class GhanaianNamesShould {
@@ -51,13 +52,22 @@ public class GhanaianNamesShould {
 
     @Test(expected = DateTimeException.class)
     public void input_too_long_gives_error_message(){
-        Assert.assertEquals(GhanaianNames.getLocalDate("012345678910"), "Date of Birth should have the format yyyy-mm-dd");
+        try {
+            GhanaianNames.getLocalDate("012345678910");
+        } catch (DateTimeException e) {
+            Assert.assertEquals(e.getMessage(), "Date of Birth should have the format yyyy-mm-dd");
+            throw e;
+        }
     }
 
     // TO DO list:
-    // How to check for actual message?
 
     // Get day of week from actual correct date input
+    @Test
+    public void date19770225_returns_Friday(){
+        Assert.assertEquals(DayOfWeek.FRIDAY, GhanaianNames.getLocalDate("1977-02-25").getDayOfWeek());
+    }
+
 
     // Provide correct Ghanaian name/names for day of the week
 
