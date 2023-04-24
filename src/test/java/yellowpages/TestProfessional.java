@@ -6,11 +6,11 @@ import org.mockito.Mock;
 import static org.junit.Assert.*;
 
 public class TestProfessional {
-    @Mock
-    YellowSearchBasic mockSearchEngine;
-
-    @Mock
-    ProfessionalRepository mockRepository;
+//    @Mock
+//    YellowSearchBasic mockSearchEngine;
+//
+//    @Mock
+//    ProfessionalRepository mockRepository;
 
 
     @Test
