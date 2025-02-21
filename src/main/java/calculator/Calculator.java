@@ -29,9 +29,6 @@ public class Calculator {
         }
     }
 
-    public int calculateInt(String expression) {
-        return (int)Math.round(calculate(expression));
-    }
 
     private double evaluateExpression(String expression) {
         expression = expression.replaceAll("\\s+", "");
