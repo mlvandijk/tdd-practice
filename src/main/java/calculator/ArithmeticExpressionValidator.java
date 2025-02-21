@@ -1,14 +1,17 @@
 package calculator;
 
+import java.util.regex.Pattern;
+
 public class ArithmeticExpressionValidator implements Validator {
+    private static final Pattern VALID_EXPRESSION_PATTERN = Pattern.compile(
+        "^[\\s\\d.+\\-*/()]*$" // Allow only numbers, operators (+, -, *, /), whitespace, decimal points, and parentheses
+    );
 
     @Override
     public boolean isValid(String expression) {
         if (expression == null || expression.trim().isEmpty()) {
-            return false; // Empty or null expressions are invalid
+            return false;
         }
-
-        // Validate the expression against allowed characters (digits, operators, and spaces)
-        return expression.matches("[0-9\\s+\\-*/]+");
+        return VALID_EXPRESSION_PATTERN.matcher(expression).matches();
     }
 }
