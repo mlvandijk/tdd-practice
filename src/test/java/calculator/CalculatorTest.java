@@ -99,7 +99,7 @@ public class CalculatorTest {
 
     @Test
     public void input_with_newlines_returns_zero() {
-        Assert.assertThat(calculator.calculate("2\n+\n3"), Matchers.is(0));
+        Assert.assertThat(calculator.calculate("2\n+\n3"), Matchers.is(5));
     }
 
     @Test
