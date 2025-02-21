@@ -106,4 +106,25 @@ public class CalculatorTest {
     public void empty_string_returns_zero() {
         Assert.assertThat(calculator.calculate(""), Matchers.is(0));
     }
+
+    @Test
+    public void input_starting_with_operator_returns_zero() {
+        Assert.assertThat(calculator.calculate("+2+3"), Matchers.is(0)); // Or handle as preferred.
+    }
+
+    @Test
+    public void input_ending_with_operator_returns_zero() {
+        Assert.assertThat(calculator.calculate("2+3*"), Matchers.is(0)); // Or handle as preferred.
+    }
+
+    @Test
+    public void multiple_consecutive_operators_return_zero() {
+        Assert.assertThat(calculator.calculate("2++2"), Matchers.is(0));
+        Assert.assertThat(calculator.calculate("4--5"), Matchers.is(0));
+    }
+
+    @Test
+    public void unary_negative_operator_is_supported() {
+        Assert.assertThat(calculator.calculate("-2+3"), Matchers.is(1));
+    }
 }
