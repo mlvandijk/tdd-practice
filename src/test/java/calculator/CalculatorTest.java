@@ -127,4 +127,39 @@ public class CalculatorTest {
     public void unary_negative_operator_is_supported() {
         Assert.assertThat(calculator.calculate("-2+3"), Matchers.is(1));
     }
+
+    @Test
+    public void unary_positive_operator_is_supported() {
+        Assert.assertThat(calculator.calculate("+5+10"), Matchers.is(15));
+    }
+
+    @Test
+    public void decimal_addition_returns_correct_result() {
+        Assert.assertThat(calculator.calculate("1.5+2.5"), Matchers.is(4.0)); // Assuming decimal support
+    }
+
+    @Test
+    public void mixed_operators_respect_precedence() {
+        Assert.assertThat(calculator.calculate("2+3*5"), Matchers.is(17)); // 2 + (3*5)
+    }
+
+    @Test
+    public void parenthesis_override_operator_precedence() {
+        Assert.assertThat(calculator.calculate("(2+3)*5"), Matchers.is(25)); // (2+3) * 5
+    }
+
+    @Test
+    public void negative_subtraction_returns_correct_value() {
+        Assert.assertThat(calculator.calculate("-10-5"), Matchers.is(-15));
+    }
+
+    @Test
+    public void negative_multiplication_returns_correct_value() {
+        Assert.assertThat(calculator.calculate("-2*3"), Matchers.is(-6));
+    }
+
+    @Test
+    public void very_large_expression_is_handled_properly() {
+        Assert.assertThat(calculator.calculate("1+2+3+4+5+6+7+8+9+10"), Matchers.is(55));
+    }
 }
