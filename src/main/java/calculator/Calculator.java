@@ -34,8 +34,8 @@ public class Calculator {
 
     private int[] getNumbersFromString(String input, String operator) {
         int index = input.indexOf(operator);
-        numbers[0] = Integer.valueOf(input.substring(0, index));
-        numbers[1] = Integer.valueOf(input.substring(index + 1, input.length()));
+        numbers[0] = Integer.parseInt(input.substring(0, index));
+        numbers[1] = Integer.parseInt(input.substring(index + 1, input.length()));
         return numbers;
     }
 }
