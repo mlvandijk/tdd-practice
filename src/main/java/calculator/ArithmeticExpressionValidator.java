@@ -3,18 +3,12 @@ package calculator;
 public class ArithmeticExpressionValidator implements Validator {
 
     @Override
-    public boolean isInputValid(String input) {
-        if (input.trim().isEmpty()) {
-            return false;
+    public boolean isValid(String expression) {
+        if (expression == null || expression.trim().isEmpty()) {
+            return false; // Empty or null expressions are invalid
         }
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-            if (Character.isDigit(c) || "+-/*".contains(String.valueOf(c)) || c == ' ') {
-                continue;
-            } else {
-                return false;
-            }
-        }
-        return true;
+
+        // Validate the expression against allowed characters (digits, operators, and spaces)
+        return expression.matches("[0-9\\s+\\-*/]+");
     }
 }

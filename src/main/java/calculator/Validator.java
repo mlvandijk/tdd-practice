@@ -1,7 +1,5 @@
 package calculator;
 
 public interface Validator {
-
-    boolean isInputValid(String input);
-
+    boolean isValid(String expression);
 }
